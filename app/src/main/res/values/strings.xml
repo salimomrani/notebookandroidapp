@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Note book</string>
+
+    //menu string
+    <string name="action_settings">Settings</string>
+    <string name="add_note">Add Note</string>
+
+
+    <!--Fragment Title String-->
+    <string name="viewFragmentTitle">View Note</string>
+    <string name="editFragmentTitle">Edit Note</string>
+
+    <!--Main List Long Click Context Menu -->
+    <string name="edit_menu">edit</string>
+    <string name="save_edit_note">Save Note</string>
+    <string name="create_fragment_title">Add Note</string>
+</resources>
