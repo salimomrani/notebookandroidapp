@@ -20,4 +20,8 @@
     <string name="hello_blank_fragment">Hello blank fragme</string>
     <string name="summary_preference_setting_title">The title that will be used on the main action bar.</string>
     <string name="summary_preference_setting_color_background">Is the main background color dark?</string>
+    <string name="notebook_title">Notebook Title</string>
+    <string name="description_de_la_note">description de la note</string>
+    <string name="confirm_dial">Are you sure?</string>
+    <string name="save_note_message">Are you sure you want to save the note?</string>
 </resources>

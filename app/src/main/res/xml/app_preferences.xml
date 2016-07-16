@@ -5,7 +5,7 @@
         android:title="General"
         >
     <EditTextPreference
-            android:title="Notebook Title"
+            android:title="@string/notebook_title"
             android:summary="@string/summary_preference_setting_title"
             android:key="title"
             android:defaultValue="Notebook"/>
