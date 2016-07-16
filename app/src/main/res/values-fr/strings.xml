@@ -8,7 +8,7 @@
     <string name="edit_menu">Modifier</string>
     <string name="save_edit_note">Sauvegarder la Note</string>
     <string name="add_note">Ajouter une note</string>
-    <string name="delete_menu">Delete</string>
+    <string name="delete_menu">Supprimer</string>
     <string name="title_preference">Paramètre Application</string>
     <string name="viewFragmentTitle">Visualiser la note</string>
     <string name="editFragmentTitle">Modifier</string>

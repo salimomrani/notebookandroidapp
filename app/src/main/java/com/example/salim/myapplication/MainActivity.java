@@ -1,15 +1,19 @@
 package com.example.salim.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    public enum FragmentToLaunch {VIEW, EDIT, CREATE}
     public static final String NOTE_ID_EXTRA = "com.example.salim.myapplication.Note iDENTIFIER";
     public static final String NOTE_TITLE_EXTRA = "com.example.salim.myapplication.Note Title";
     public static final String NOTE_MESSAGE_EXTRA = "com.example.salim.myapplication.Note Message";
@@ -22,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        loadPreferences();
     }
 
     @Override
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -52,5 +59,18 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public enum FragmentToLaunch {VIEW, EDIT, CREATE}
+    private void loadPreferences(){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        boolean isBackgroundDark = sharedPreferences.getBoolean("background_color",false);
+        if (isBackgroundDark){
+            LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainactivityLayout);
+            mainLayout.setBackgroundColor(Color.parseColor("#3c3f41"));
+
+        }
+        String notebookTitle = sharedPreferences.getString("title","Notebook");
+        setTitle(notebookTitle);
+    }
+
+
 }
