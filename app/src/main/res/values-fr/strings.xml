@@ -8,4 +8,5 @@
     <string name="edit_menu">modifier</string>
     <string name="save_edit_note">Sauvegarder la Note</string>
     <string name="add_note">Add Note</string>
+    <string name="delete_menu">Delete</string>
 </resources>

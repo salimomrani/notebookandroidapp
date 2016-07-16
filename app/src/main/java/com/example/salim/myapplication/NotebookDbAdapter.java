@@ -102,6 +102,10 @@ public class NotebookDbAdapter {
 
     }
 
+    public long deleteNote (long idTodate){
+        return sqLiteDatabase.delete(NOTE_TABLE,COLUMN_ID + "=" + idTodate , null);
+    }
+
     private static class NotebookDbHelpher extends SQLiteOpenHelper {
 
 

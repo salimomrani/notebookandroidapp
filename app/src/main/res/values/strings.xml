@@ -15,4 +15,5 @@
     <string name="edit_menu">edit</string>
     <string name="save_edit_note">Save Note</string>
     <string name="create_fragment_title">Add Note</string>
+    <string name="delete_menu">Delete</string>
 </resources>
