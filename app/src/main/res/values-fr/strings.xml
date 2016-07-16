@@ -13,4 +13,6 @@
     <string name="viewFragmentTitle">Visualiser la note</string>
     <string name="editFragmentTitle">Modifier</string>
     <string name="create_fragment_title">Ajouter une note</string>
+    <string name="summary_preference_setting_title"> Le titre qui sera utilisé sur la barre d\'action principale.</string>
+    <string name="summary_preference_setting_color_background">Is the main background color dark?</string>
 </resources>
