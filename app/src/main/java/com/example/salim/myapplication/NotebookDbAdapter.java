@@ -89,6 +89,19 @@ public class NotebookDbAdapter {
         return cursorToNote(cursor);
     }
 
+    public long updateNote (long idTodate , String newTitle , String newMessage , Note.Category newCategory){
+
+        ContentValues values = new ContentValues();
+
+        values.put(COLUMN_TITLE, newTitle);
+        values.put(COLUMN_MESSAGE, newMessage);
+        values.put(Column_CATEGORY, newCategory.name());
+        values.put(COLUMN_DATE, Calendar.getInstance().getTimeInMillis());
+
+        return sqLiteDatabase.update(NOTE_TABLE,values,COLUMN_ID +  "=" + idTodate,null);
+
+    }
+
     private static class NotebookDbHelpher extends SQLiteOpenHelper {
 
 

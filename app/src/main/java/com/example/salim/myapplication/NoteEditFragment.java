@@ -22,6 +22,7 @@ public class NoteEditFragment extends Fragment {
 
 
     private static final String MODIFIERD_CATEGORY = "Modified Category";
+    private long noteId =0;
     private ImageButton noteCatButton;
     private EditText title, message;
     private Note.Category saveButtonCategory;
@@ -62,7 +63,7 @@ public class NoteEditFragment extends Fragment {
 
         title.setText(intent.getExtras().getString(MainActivity.NOTE_TITLE_EXTRA, ""));
         message.setText(intent.getExtras().getString(MainActivity.NOTE_MESSAGE_EXTRA, ""));
-
+        noteId = intent.getLongExtra(MainActivity.NOTE_ID_EXTRA,0);
         if (saveButtonCategory != null) {
             noteCatButton.setImageResource(Note.categoryToDrawable(saveButtonCategory));
         } else if (!newNote) {
@@ -150,12 +151,15 @@ public class NoteEditFragment extends Fragment {
                         + message.getText() + "Note category" + saveButtonCategory);
                 NotebookDbAdapter dbAdapter = new NotebookDbAdapter(getActivity().getBaseContext());
                 dbAdapter.open();
+
                 if (newNote) {
                     dbAdapter.createNote(title.getText() + "", message.getText() + "", (saveButtonCategory == null) ? Note.Category.PERSONAL : saveButtonCategory);
                 } else {
-
+                    dbAdapter.updateNote(noteId , title.getText()+ "", message.getText() + "",saveButtonCategory);
                 }
+                dbAdapter.close();
                 Intent intent = new Intent(getActivity(), MainActivity.class);
+
                 startActivity(intent);
 
             }
