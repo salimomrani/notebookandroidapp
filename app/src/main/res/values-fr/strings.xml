@@ -1,12 +1,16 @@
 <resources>
-    <string name="app_name">Note Book</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">NoteBook</string>
+    <string name="action_settings">Paramètre</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="note_title">Note Title</string>
-    <string name="edit_menu">modifier</string>
+    <string name="edit_menu">Modifier</string>
     <string name="save_edit_note">Sauvegarder la Note</string>
-    <string name="add_note">Add Note</string>
+    <string name="add_note">Ajouter une note</string>
     <string name="delete_menu">Delete</string>
+    <string name="title_preference">Paramètre Application</string>
+    <string name="viewFragmentTitle">Visualiser la note</string>
+    <string name="editFragmentTitle">Modifier</string>
+    <string name="create_fragment_title">Ajouter une note</string>
 </resources>

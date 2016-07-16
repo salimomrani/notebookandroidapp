@@ -10,10 +10,12 @@
     <!--Fragment Title String-->
     <string name="viewFragmentTitle">View Note</string>
     <string name="editFragmentTitle">Edit Note</string>
+    <string name="title_preference">Application Settings</string>
 
     <!--Main List Long Click Context Menu -->
     <string name="edit_menu">edit</string>
     <string name="save_edit_note">Save Note</string>
     <string name="create_fragment_title">Add Note</string>
     <string name="delete_menu">Delete</string>
+    <string name="hello_blank_fragment">Hello blank fragme</string>
 </resources>

@@ -2,8 +2,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
-        android:title="General">
-        <EditTextPreference
+        android:title="General"
+        >
+    <EditTextPreference
             android:title="Notebook Title"
             android:summary="The title that will be used on the main action bar."
             android:key="tittle"
