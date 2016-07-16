@@ -5,3 +5,5 @@
 /build
 /captures
 Supprimerait app/libs/
+Supprimerait .idea/libraries/
+Supprimerait .idea/workspace.xml
